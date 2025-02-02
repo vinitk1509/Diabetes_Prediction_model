@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased text-gray-800;
+  }
+}
+
+@layer components {
+  .chat-message {
+    @apply animate-fade-in;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+[data-theme="dark"] {
+  background-color: #333;
+  color: white;
+}
+
+[data-theme="light"] {
+  background-color: #f9f9f9;
+  color: black;
+}
